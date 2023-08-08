@@ -1,8 +1,53 @@
 <template>
   <div class="article-card">
     Article Card
+    <h3>{{ title }}</h3>
+    <div class="author">
+      <p>por {{ author }}</p>
+      <small>Fecha de publicación {{ date.toLocaleDateString() }}</small>
+    </div>
+    <figure>
+      <img :src="image" :alt="title" />
+    </figure>
+    <p>{{ description }}</p>
+    <div class="actions">
+      <button class="btn" :href="slug" >Ir al post</button>
+    </div>
   </div>
 </template>
+
+<script>
+export default {
+  name: 'ArticleCard',
+  props: {
+    title: {
+      type: String,
+      default: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.'
+    },
+    author: {
+      type: String,
+      default: 'John Doe'
+    },
+    date: {
+      type: Date,
+      default: () => new Date()
+    },
+    image: {
+      type: String,
+      default: 'https://picsum.photos/500/300'
+    },
+    description: {
+      type: String,
+      default: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.'
+    },
+    slug: {
+      type: String,
+      default: ''
+    }
+  },
+  data() {}
+}
+</script>
 
 <style lang="scss" scoped>
 .article-card {

@@ -1,5 +1,8 @@
 <template>
-  <div class="about-me">About Me</div>
+  <div class="about-me">About Me
+    <h1>Mini Blog</h1>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facilis, perspiciatis! Reiciendis odit eligendi voluptatem ex, deleniti id facere voluptatibus blanditiis sunt iusto autem, molestiae impedit reprehenderit sed doloremque quisquam quis.</p>
+  </div>
 </template>
 
 <style lang="scss" scoped>
