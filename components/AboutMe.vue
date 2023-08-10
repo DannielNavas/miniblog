@@ -1,9 +1,20 @@
 <template>
-  <div class="about-me">About Me
-    <h1>Mini Blog</h1>
-    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facilis, perspiciatis! Reiciendis odit eligendi voluptatem ex, deleniti id facere voluptatibus blanditiis sunt iusto autem, molestiae impedit reprehenderit sed doloremque quisquam quis.</p>
+  <div class="layout-default">
+    <header>
+      <menu>
+        <NuxtLink class="brand" to="/">Daniel Navas</NuxtLink>
+        <NuxtLink to="/about">Sobre mí</NuxtLink>
+      </menu>
+    </header>
+    <Nuxt />
   </div>
 </template>
+
+<script>
+export default {
+  name: 'LayoutDefault',
+}
+</script>
 
 <style lang="scss" scoped>
 .about-me {

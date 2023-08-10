@@ -1,7 +1,7 @@
 <template>
   <div class="article-card">
     Article Card
-    <h3>{{ title }}</h3>
+    <NuxtLink :to="slug"><h3>{{ title }}</h3></NuxtLink>
     <div class="author">
       <p>por {{ author }}</p>
       <small>Fecha de publicación {{ date.toLocaleDateString() }}</small>
@@ -11,7 +11,8 @@
     </figure>
     <p>{{ description }}</p>
     <div class="actions">
-      <button class="btn" :href="slug" >Ir al post</button>
+      <!-- <NuxtLink class="btn" :to="slug" >Ir al post</NuxtLink> -->
+      <nuxt-link class="btn" :to="slug" >Ir al post</nuxt-link>
     </div>
   </div>
 </template>
