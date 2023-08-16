@@ -24,6 +24,17 @@ export default {
   components: {
     VueMarkdown,
   },
+  middleware(context) {
+    // intersepcion del vue router
+    console.log(context);
+  },
+  asyncData({ params, $http }) {
+    const { slug } = params;
+    const article = $http.$get(`https://beamish-biscochitos-1a5924.netlify.app/.netlify/functions/articles/${slug}`);
+    console.log(article);
+    // esto se debe devolver para que sea accesible desde cualquier lado
+    return article;
+  },
   data() {
     return {
       post: {
