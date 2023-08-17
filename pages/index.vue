@@ -27,6 +27,9 @@ export default {
         ]
       };
   },
+  // async asyncData({isDev, $http}) {
+
+  // },
   async mounted() {
     const url = 'https://beamish-biscochitos-1a5924.netlify.app/.netlify/functions/articles';
     const { articles } = await this.$http.$get(url);
