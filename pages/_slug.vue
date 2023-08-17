@@ -29,9 +29,16 @@ export default {
     console.log(context);
   },
   asyncData({ params, $http }) {
+    // se agrega una barra de carga
+    // this.$nuxt.$loading.start();
     const { slug } = params;
     const article = $http.$get(`https://beamish-biscochitos-1a5924.netlify.app/.netlify/functions/articles/${slug}`);
     console.log(article);
+    // se refresca la pagina
+    // this.$nuxt.refresh();
+    // se quita la barra de carga
+    // this.$nuxt.$loading.finish();
+
     // esto se debe devolver para que sea accesible desde cualquier lado
     return article;
   },
